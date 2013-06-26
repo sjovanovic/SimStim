@@ -1,6 +1,3 @@
-//thumbs.0.5.2.min.js - http://mwbrooks.github.io/thumbs.js/
-(function(b){try{document.createEvent("TouchEvent");return}catch(d){}var c={mousedown:"touchstart",mouseup:"touchend",mousemove:"touchmove"};b.addEventListener("load",function(){for(var e in c){document.body.addEventListener(e,function(h){var g=a(c[h.type],h);h.target.dispatchEvent(g);var f=h.target["on"+c[h.type]];if(typeof f==="function"){f(h)}},false)}},false);var a=function(f,h){var g=document.createEvent("MouseEvents");g.initMouseEvent(f,h.bubbles,h.cancelable,h.view,h.detail,h.screenX,h.screenY,h.clientX,h.clientY,h.ctrlKey,h.altKey,h.shiftKey,h.metaKey,h.button,h.relatedTarget);return g}})(window);
-
 // simstim
 var SimStim = {
     'cb':function(cb){
@@ -28,7 +25,36 @@ var SimStim = {
     'setMeshScale':function(meshName, x, y, z, cb1, cb2){
         cordova.exec(this.cb(cb1), this.cb(cb2), "SimStimGL", "setMeshScale", [meshName, x, y, z]);
     },
-    'onMesh':function(meshName, evtName, f){
-        window.document.addEventListener('');
+    /*
+     * structures = position (4), normals (3), texcoord (2) - e.g. "0.1,0.2,0.3,1.0,0.4,0.5,0.6,1.0,0.0" ...
+     * indices e.g. "1,2,3" ...
+     * 
+    */
+    'createMesh':function(meshName, structures, indices, vertexShader, fragmentShader, textureImg, cb1, cb2){
+        vertexShader = vertexShader?vertexShader:"";
+        fragmentShader = fragmentShader?fragmentShader:"";
+        textureImg = textureImg?textureImg:"";
+        cordova.exec(this.cb(cb1), this.cb(cb2), "SimStimGL", "createMesh", [meshName, structures, indices, vertexShader, fragmentShader, textureImg]);
+    },
+    'setMeshTexture':function(meshName, textureImg, cb1, cb2){
+        cordova.exec(this.cb(cb1), this.cb(cb2), "SimStimGL", "setMeshTexture", [meshName, textureImg]);
+    },
+    'setMeshShaders':function(meshName, vertexShader, fragmentShader, cb1, cb2){
+        cordova.exec(this.cb(cb1), this.cb(cb2), "SimStimGL", "setMeshShaders", [meshName, vertexShader, fragmentShader]);
+    },
+    'getMeshCoords':function(meshName, cb1, cb2){
+        cordova.exec(this.cb(cb1), this.cb(cb2), "SimStimGL", "getMeshCoords", [meshName]);
+    },
+    'getCamCoords':function(cb1, cb2){
+        cordova.exec(this.cb(function(res){
+            res = res.split(',');
+            cb1.call(this, {'x':res[0], 'y':res[1], 'z':res[2]});
+        }), this.cb(cb2), "SimStimGL", "getCamCoords", []);
+    },
+    'moveTo':function(meshName, x, y, z, duration, cb1, cb2){
+        cordova.exec(this.cb(cb1), this.cb(cb2), "SimStimGL", "moveTo", [meshName, x, y, z, duration]);
+    },
+    'moveCamTo':function(x, y, z, duration, cb1, cb2){
+        cordova.exec(this.cb(cb1), this.cb(cb2), "SimStimGL", "moveCamTo", [x, y, z, duration]);
     }
 };

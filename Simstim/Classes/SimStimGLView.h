@@ -27,5 +27,10 @@
 - (void)setMeshRotation:(NSString*)meshName withX:(NSString*)x withY:(NSString*)y withZ:(NSString*)z;
 - (void)setMeshCoords:(NSString*)meshName withX:(NSString*)x withY:(NSString*)y withZ:(NSString*)z;
 - (void)setMeshScale:(NSString*)meshName withX:(NSString*)x withY:(NSString*)y withZ:(NSString*)z;
-
+- (void)createMesh:(NSString*)meshName withStructures:(NSString*)stru withIndices:(NSString*)indi withVertexShader:(NSString*)vsh withFragmentShader:(NSString*)fsh withTexture:(NSString*)texture;
+- (void)setMeshShaders:(NSString*)meshName withVertexShader:(NSString*)vsh withFragmentShader:(NSString*)fsh;
+- (NSString *)getMeshCoords:(NSString*)meshName;
+- (NSString *)getCamCoords;
+- (void)moveTo:(NSString*)meshName coordX:(NSString*)x coordY:(NSString*)y coordZ:(NSString*)z duration:(NSString*)d;
+- (void)moveCamTo:(NSString*)x coordY:(NSString*)y coordZ:(NSString*)z duration:(NSString*)d;
 @end

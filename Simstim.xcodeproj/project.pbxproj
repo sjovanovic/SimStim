@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		120AEA84174D44F10014FC9B /* land.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 120AEA83174D44F10014FC9B /* land.jpg */; };
 		12332E191719952600C49ED9 /* SimStimGL.m in Sources */ = {isa = PBXBuildFile; fileRef = 12332E181719952600C49ED9 /* SimStimGL.m */; };
 		12332E1C1719986400C49ED9 /* SimStimGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 12332E1B1719986400C49ED9 /* SimStimGLView.m */; };
 		12332E1F171B1AF500C49ED9 /* SA_LD_Male_Character.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 12332E1D171B1AF500C49ED9 /* SA_LD_Male_Character.mtl */; };
@@ -25,6 +26,7 @@
 		12A1E039171850DA00F08FFC /* sphere.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 12A1E035171850DA00F08FFC /* sphere.mtl */; };
 		12A1E03A171850DA00F08FFC /* sphere.obj in Resources */ = {isa = PBXBuildFile; fileRef = 12A1E036171850DA00F08FFC /* sphere.obj */; };
 		12A1E03D17185E5400F08FFC /* SimPick.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A1E03C17185E5400F08FFC /* SimPick.m */; };
+		12E2D875174E5771006CD9D0 /* leather_bump.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 12E2D874174E5771006CD9D0 /* leather_bump.jpg */; };
 		12F76B97171D6974004E395C /* desert.obj in Resources */ = {isa = PBXBuildFile; fileRef = 12F76B96171D6974004E395C /* desert.obj */; };
 		1D3623260D0F684500981E51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* AppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
@@ -83,6 +85,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		120AEA83174D44F10014FC9B /* land.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = land.jpg; sourceTree = "<group>"; };
 		12332E171719952600C49ED9 /* SimStimGL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimStimGL.h; sourceTree = "<group>"; };
 		12332E181719952600C49ED9 /* SimStimGL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimStimGL.m; sourceTree = "<group>"; };
 		12332E1A1719986400C49ED9 /* SimStimGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimStimGLView.h; sourceTree = "<group>"; };
@@ -110,6 +113,7 @@
 		12A1E036171850DA00F08FFC /* sphere.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sphere.obj; sourceTree = "<group>"; };
 		12A1E03B17185E5400F08FFC /* SimPick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimPick.h; sourceTree = "<group>"; };
 		12A1E03C17185E5400F08FFC /* SimPick.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimPick.m; sourceTree = "<group>"; };
+		12E2D874174E5771006CD9D0 /* leather_bump.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = leather_bump.jpg; sourceTree = "<group>"; };
 		12F76B96171D6974004E395C /* desert.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = desert.obj; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -217,6 +221,8 @@
 		12A1E032171850DA00F08FFC /* 3dobjects */ = {
 			isa = PBXGroup;
 			children = (
+				12E2D874174E5771006CD9D0 /* leather_bump.jpg */,
+				120AEA83174D44F10014FC9B /* land.jpg */,
 				12F76B96171D6974004E395C /* desert.obj */,
 				12332E21171B1DEA00C49ED9 /* Femal_Base_Mesh.obj */,
 				12332E1D171B1AF500C49ED9 /* SA_LD_Male_Character.mtl */,
@@ -479,6 +485,8 @@
 				12332E20171B1AF500C49ED9 /* SA_LD_Male_Character.obj in Resources */,
 				12332E22171B1DEA00C49ED9 /* Femal_Base_Mesh.obj in Resources */,
 				12F76B97171D6974004E395C /* desert.obj in Resources */,
+				120AEA84174D44F10014FC9B /* land.jpg in Resources */,
+				12E2D875174E5771006CD9D0 /* leather_bump.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
